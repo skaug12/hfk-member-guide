@@ -42,12 +42,12 @@
 }
 .reveal h2 {
   font-weight: 700; font-size: 1.55em;
-  color: var(--red); margin-bottom: 0.25em;
+  color: var(--red); margin-bottom: 0.4em;
   letter-spacing: -0.03em; line-height: 1.3;
 }
 .reveal h3 {
   font-weight: 600; font-size: 0.88em;
-  color: var(--burgundy); margin-bottom: 0.2em;
+  color: var(--burgundy); margin-bottom: 0.3em;
   line-height: 1.3;
 }
 .reveal p, .reveal li {
@@ -55,7 +55,7 @@
   line-height: 1.55; color: inherit;
 }
 .reveal ul { list-style: none; padding-left: 0; margin: 0; }
-.reveal ul li { position: relative; padding-left: 1em; margin-bottom: 0.2em; }
+.reveal ul li { position: relative; padding-left: 1em; margin-bottom: 0.25em; }
 .reveal ul li::before {
   content: ''; position: absolute;
   left: 0; top: 0.55em;
@@ -66,7 +66,7 @@
   font-size: 12px; color: var(--red);
   background: transparent; right: 16px; bottom: 12px;
 }
-.reveal .progress { height: 3px; color: var(--red); }
+.reveal .progress { display: none; }
 .reveal .controls .navigate-left, .reveal .controls .navigate-right,
 .reveal .controls .navigate-up, .reveal .controls .navigate-down { color: var(--red); }
 
@@ -92,9 +92,9 @@
 .t-brown h2 { color: var(--cream) !important; }
 
 /* ── Layout helpers ── */
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
-.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
 .gap-sm { gap: 14px; }
 .align-center { align-items: center; }
 .v-center { display: flex; flex-direction: column; justify-content: center; height: 100%; }
@@ -102,12 +102,11 @@
 .section-label {
   font-size: 0.42em; font-weight: 500;
   letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--red); margin-bottom: 0.15em; opacity: 0.5;
+  color: var(--red); margin-bottom: 0.1em; opacity: 0.5;
 }
 .t-dark .section-label, .t-espresso .section-label, .t-brown .section-label { color: var(--coral); }
 
-.divider { width: 36px; height: 3px; background: var(--red); border-radius: 2px; margin: 0.1em 0 0.35em; }
-.t-dark .divider, .t-brown .divider { background: var(--coral); }
+.divider { display: none; }
 
 /* ── Image ── */
 .img-cover {
@@ -280,12 +279,12 @@
 <section class="t-cream">
   <div class="section-label">Welcome</div>
   <h2>반갑습니다.</h2>
-  <div class="divider"></div>
+
   <div class="grid-2 align-center">
     <div>
       <p>오늘은 HFK를 소개하고, 시즌 참여 방법을 안내 드립니다.<br>그리고 멤버들과 자기 소개를 나눕니다.</p>
-      <p style="margin-top:0.4em; font-weight:600; font-size:0.6em;">타임테이블</p>
-      <table style="width:100%; font-size:0.52em; margin-top:0.2em; border-collapse:collapse;">
+      <p style="margin-top:0.5em; font-weight:600; font-size:0.6em;">타임테이블</p>
+      <table style="width:100%; font-size:0.52em; margin-top:0.25em; border-collapse:collapse;">
         <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
           <td style="padding:6px 0; font-weight:600; width:140px; color:var(--red);">19:30 – 19:50</td>
           <td style="padding:6px 0;">HFK 소개</td>
@@ -320,20 +319,20 @@
 <section class="t-dark">
   <div class="section-label">About HFK</div>
   <h2>HFK 소개</h2>
-  <div class="divider"></div>
+
   <div class="grid-2" style="gap:36px;">
     <div>
       <h3 style="color:var(--coral) !important; font-size:0.68em;">Mission</h3>
-      <p style="font-weight:600; font-size:0.7em; line-height:1.35; margin-bottom:0.2em;">실무 리더가 더 깊이 성장할 수 있는<br>질문과 환경을 만든다.</p>
+      <p style="font-weight:600; font-size:0.7em; line-height:1.35; margin-bottom:0.3em;">실무 리더가 더 깊이 성장할 수 있는<br>질문과 환경을 만든다.</p>
       <p style="line-height:1.55;">본질적인 질문을 함께 탐구하고<br>서로의 경험과 관점을 교차시키며<br>사고의 깊이를 확장하는 커뮤니티입니다.</p>
     </div>
     <div>
       <h3 style="color:var(--coral) !important; font-size:0.68em;">Vision</h3>
-      <p style="font-weight:600; font-size:0.7em; line-height:1.35; margin-bottom:0.2em;">실무 리더의 성장을 설계하는<br>가장 신뢰받는 커뮤니티가 된다.</p>
+      <p style="font-weight:600; font-size:0.7em; line-height:1.35; margin-bottom:0.3em;">실무 리더의 성장을 설계하는<br>가장 신뢰받는 커뮤니티가 된다.</p>
       <p style="line-height:1.55;">서울 정동을 기반으로<br>다양한 산업의 실무 리더들이 모여<br>질문을 나누고, 관점을 확장하며<br>자신의 경험을 기록으로 남기는 리더 성장의 플랫폼.</p>
     </div>
   </div>
-  <div style="margin-top:0.4em; display:flex; align-items:center; gap:14px;">
+  <div style="margin-top:0.5em; display:flex; align-items:center; gap:16px;">
     <div style="background:rgba(255,97,84,0.15); color:var(--coral); padding:8px 18px; border-radius:20px; font-size:0.48em; font-weight:500;">2013년 HBR을 읽는 모임으로 시작</div>
     <span style="color:var(--coral); font-size:0.55em;">&rarr;</span>
     <div style="background:rgba(255,97,84,0.15); color:var(--coral); padding:8px 18px; border-radius:20px; font-size:0.48em; font-weight:500;">현재 3개월 시즌제 커뮤니티</div>
@@ -346,7 +345,7 @@
 <section class="t-cream">
   <div class="section-label">History</div>
   <h2>HFK의 여정</h2>
-  <div class="divider"></div>
+
   <div class="grid-2 align-center">
     <div class="timeline">
       <div class="tl-item">
@@ -385,7 +384,7 @@
 <section class="t-dark">
   <div class="section-label">Structure</div>
   <h2>팀, 이벤트, 클럽</h2>
-  <div class="divider"></div>
+
   <div class="grid-3">
     <div class="card fragment fade-up">
       <img class="card-img" src="https://cdn.imweb.me/thumbnail/20250809/0b1be3d7ee166.png" alt="팀">
@@ -420,17 +419,17 @@
 <section class="t-cream">
   <div class="section-label">Team Detail</div>
   <h2>팀</h2>
-  <div class="divider"></div>
+
   <div class="grid-2 align-center">
     <div>
-      <p style="margin-bottom:0.3em;">경영 전략, 리더십, 커리어 등 시의적절한 주제를 중심으로 기획됩니다.</p>
-      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.1em;">진행 방식</p>
-      <ul style="margin-bottom:0.3em;">
+      <p style="margin-bottom:0.4em;">경영 전략, 리더십, 커리어 등 시의적절한 주제를 중심으로 기획됩니다.</p>
+      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.15em;">진행 방식</p>
+      <ul style="margin-bottom:0.4em;">
         <li>토론형 — 주제에 대해 멤버들과 깊이 있는 대화</li>
         <li>강의형 — 해당 분야 전문 파트너의 강의</li>
         <li>워크숍형 — 실습과 결과물 중심의 모임</li>
       </ul>
-      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.1em;">팀 어드벤처</p>
+      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.15em;">팀 어드벤처</p>
       <p>두 번째 달부터 다른 팀의 세션을 청강할 수 있습니다.<br>자신의 팀을 제외하고 모든 팀에 1번씩 참여 가능합니다.</p>
     </div>
     <img class="img-cover" src="https://cdn.imweb.me/thumbnail/20250809/0b1be3d7ee166.png" alt="팀 활동" style="height:300px;">
@@ -443,17 +442,17 @@
 <section class="t-sand">
   <div class="section-label">Event &amp; Club</div>
   <h2>이벤트와 클럽</h2>
-  <div class="divider"></div>
+
   <div class="grid-2" style="gap:32px;">
     <div>
       <h3 style="color:var(--red) !important;">이벤트</h3>
-      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.1em;">월별 세미나</p>
-      <ul style="margin-bottom:0.3em;">
+      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.15em;">월별 세미나</p>
+      <ul style="margin-bottom:0.4em;">
         <li>PEST 브리핑 — 정치·경제·사회·기술 이슈 (시즌 1회)</li>
         <li>AAR 밋업 — 멤버 프로젝트 기획/운영기 발표 (시즌 1회)</li>
         <li>HBR 브리핑 — 멤버가 추천하는 HBR 아티클 (시즌 1회)</li>
       </ul>
-      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.1em;">정기 이벤트</p>
+      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.15em;">정기 이벤트</p>
       <ul>
         <li>저자 북토크 — 저자를 직접 만나 대화 (매달 1회)</li>
         <li>스페셜 토크 — 멤버·파트너·운영진 초대 기획 (상시)</li>
@@ -461,7 +460,7 @@
     </div>
     <div>
       <h3 style="color:var(--red) !important;">클럽</h3>
-      <p style="margin-bottom:0.2em;">멤버들이 자발적으로 기획하고 운영하는 소모임입니다.<br>시즌 시작 후 첫 달 중순에 모집합니다.</p>
+      <p style="margin-bottom:0.3em;">멤버들이 자발적으로 기획하고 운영하는 소모임입니다.<br>시즌 시작 후 첫 달 중순에 모집합니다.</p>
       <img class="img-cover" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/f475fa36b62a7.png" alt="클럽 활동" style="height:150px; margin-top:0.15em;">
       <p style="font-size:0.42em; opacity:0.5; margin-top:0.1em;">와인, 하이킹, 전시, 독서, 운동 등. 신청: 구글폼</p>
     </div>
@@ -474,10 +473,10 @@
 <section class="t-cream">
   <div class="section-label">Communication</div>
   <h2>슬랙</h2>
-  <div class="divider"></div>
+
   <div class="grid-2 align-center">
     <div>
-      <p style="margin-bottom:0.3em;">HFK의 모든 공지, 신청, 교류는 슬랙(Slack)을 통해 이루어집니다.</p>
+      <p style="margin-bottom:0.4em;">HFK의 모든 공지, 신청, 교류는 슬랙(Slack)을 통해 이루어집니다.</p>
       <div class="hl">
         <p style="font-size:0.55em; font-weight:600;">프로필 수정 (필수)</p>
         <p style="font-size:0.48em; margin-top:0.1em;">Display Name: 이름_팀명<br>What I do: 회사명<br>알람 허용 &middot; 채널 확인</p>
@@ -496,7 +495,7 @@
 <section class="t-dark">
   <div class="section-label">Slack Channels</div>
   <h2>슬랙 채널 구조</h2>
-  <div class="divider"></div>
+
   <div class="grid-2" style="gap:32px;">
     <div>
       <h3 style="font-size:0.72em; margin-bottom:0.15em;"><span style="color:var(--coral);">0번</span> 전체 멤버 채널</h3>
@@ -529,16 +528,16 @@
 <section class="t-sand">
   <div class="section-label">How to Participate</div>
   <h2>참여 방법</h2>
-  <div class="divider"></div>
+
   <div class="grid-2 align-center">
     <div>
-      <p style="font-weight:500; margin-bottom:0.25em;">매주 일요일 밤 9시, 시즌레터</p>
-      <ul style="margin-bottom:0.3em;">
+      <p style="font-weight:500; margin-bottom:0.3em;">매주 일요일 밤 9시, 시즌레터</p>
+      <ul style="margin-bottom:0.4em;">
         <li>한 주간 HFK 소식 요약</li>
         <li>차주 진행될 세션 안내</li>
         <li>신청 가능한 이벤트 안내</li>
       </ul>
-      <p style="margin-bottom:0.15em;">참석 여부는 이모지로 표시해주세요.</p>
+      <p style="margin-bottom:0.2em;">참석 여부는 이모지로 표시해주세요.</p>
       <p style="font-size:0.48em; opacity:0.7;">🙆‍♀️ 참석 &middot; 🙅 불참 &middot; 🤔 뒤풀이</p>
     </div>
     <div>
@@ -554,10 +553,10 @@
 <section class="t-cream">
   <div class="section-label">Introduce Yourself</div>
   <h2>자기 소개 미션</h2>
-  <div class="divider"></div>
+
   <div class="grid-2 align-center">
     <div>
-      <p style="font-weight:500; margin-bottom:0.2em;">첫 세션 전까지 슬랙에 자기소개를 남겨주세요.</p>
+      <p style="font-weight:500; margin-bottom:0.3em;">첫 세션 전까지 슬랙에 자기소개를 남겨주세요.</p>
       <ul>
         <li>어느 회사에서 어떤 일을 하시나요?</li>
         <li>HFK를 알게 된 경로와 등록 동기는?</li>
@@ -565,7 +564,7 @@
         <li>자신의 일을 한 줄로 표현한다면?</li>
         <li>최근 인상 깊었던 콘텐츠와 즐겨찾는 공간은?</li>
       </ul>
-      <p style="font-size:0.45em; opacity:0.55; margin-top:0.2em;">(작성하신 자기소개는 3개월 뒤 자동으로 삭제됩니다.)</p>
+      <p style="font-size:0.45em; opacity:0.55; margin-top:0.3em;">(작성하신 자기소개는 3개월 뒤 자동으로 삭제됩니다.)</p>
     </div>
     <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/052e5e95155c9.png" alt="자기소개 미션">
   </div>
@@ -577,7 +576,7 @@
 <section class="t-sand">
   <div class="section-label">Networking</div>
   <h2>클럽과 오픈 채팅방</h2>
-  <div class="divider"></div>
+
   <div class="grid-2" style="gap:32px;">
     <div>
       <h3 style="color:var(--red) !important;">카카오톡</h3>
@@ -614,9 +613,9 @@
 <section class="t-cream">
   <div class="section-label">Ground Rules</div>
   <h2>그라운드룰</h2>
-  <p style="font-size:0.52em; opacity:0.6; margin-bottom:0.05em;">다양한 산업, 직무, 연령대가 모이는 HFK에서 서로의 성장을 위해 지켜주세요.</p>
-  <div class="divider"></div>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:0.15em;">
+  <p style="font-size:0.52em; opacity:0.6; margin-bottom:0.3em;">다양한 산업, 직무, 연령대가 모이는 HFK에서 서로의 성장을 위해 지켜주세요.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
     <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
       <span class="icon" style="margin:0; font-size:1em;">🤝</span>
       <div><span class="name">호칭</span><span class="detail">직급, 나이를 떠나 서로 '님'으로 불러요.</span></div>
@@ -654,11 +653,11 @@
 <section class="t-sand">
   <div class="section-label">Review Culture</div>
   <h2>4L Review</h2>
-  <div class="divider"></div>
+
   <div class="grid-2" style="gap:28px;">
     <div>
       <p>모임이 끝난 후, 슬랙에 4L 리뷰를 남겨주세요.<br>4개의 관점으로 그날의 경험을 정리하는 방법입니다.</p>
-      <p style="margin-top:0.2em; font-weight:500;">기록할 때 비로소 자신의 것이 됩니다.</p>
+      <p style="margin-top:0.3em; font-weight:500;">기록할 때 비로소 자신의 것이 됩니다.</p>
     </div>
     <div class="grid-2 gap-sm">
       <div class="l-card fragment fade-up">
@@ -687,7 +686,7 @@
 <section class="t-cream">
   <div class="section-label">Benefits</div>
   <h2>HFK 멤버만을 위한 혜택</h2>
-  <div class="divider"></div>
+
   <div class="grid-4">
     <div class="ben fragment fade-up">
       <img class="ben-img" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/9374ae77a7f09.png" alt="HBR">
@@ -726,8 +725,7 @@
 <section class="t-brown">
   <div class="v-center" style="text-align:center; align-items:center;">
     <div class="section-label" style="color:rgba(225,218,201,0.5);">Introduce</div>
-    <h2 style="font-size:2em; color:var(--cream) !important;">지금부터<br>서로 소개하는 시간입니다.</h2>
-    <div class="divider" style="background:var(--coral); margin:0.4em auto 0.5em;"></div>
+    <h2 style="font-size:2em; color:var(--cream) !important; margin-bottom:0.5em;">지금부터<br>서로 소개하는 시간입니다.</h2>
     <p style="font-size:0.58em; color:var(--sand); max-width:500px; margin:0 auto;">
       이름 / 회사 / 직무<br>
       HFK를 알게 된 경로와 등록 동기<br>
@@ -743,8 +741,7 @@
 <section class="t-espresso" style="padding:0 !important; position:relative;">
   <img class="img-full" src="https://cdn.imweb.me/thumbnail/20240710/503f92d07fb78.jpg" alt="" style="opacity:0.3;">
   <div class="v-center" style="position:relative; z-index:2; text-align:center; align-items:center; padding:64px;">
-    <h2 style="font-size:2.2em; color:var(--cream) !important;">명함 교환 &<br>네트워킹</h2>
-    <div class="divider" style="background:var(--coral); margin:0.4em auto 0.5em;"></div>
+    <h2 style="font-size:2.2em; color:var(--cream) !important; margin-bottom:0.5em;">명함 교환 &<br>네트워킹</h2>
     <p style="font-size:0.58em; color:var(--sand);">지금부터 서로 명함 교환하며 인사 나눠요.</p>
     <p style="font-size:0.42em; color:rgba(206,185,164,0.5); margin-top:0.5em;">최근 공지도 확인해주세요!</p>
   </div>
