@@ -11,9 +11,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-/* ════════════════════════════════════════
-   HFK Brand Tokens
-   ════════════════════════════════════════ */
 :root {
   --red: #980000;
   --burgundy: #441a14;
@@ -28,40 +25,40 @@
   --sand-bg: #e8dfd3;
 }
 
-/* ════════════════════════════════════════
-   Base
-   ════════════════════════════════════════ */
+/* ── Base ── */
 .reveal, .reveal * { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif !important; }
 .reveal { font-size: 32px; color: var(--charcoal); }
 .reveal .slides { text-align: left; }
 .reveal .slides section {
-  padding: 48px 60px;
+  padding: 56px 72px;
   box-sizing: border-box;
   height: 100%;
   overflow: hidden;
 }
+
+/* ── Typography ── */
 .reveal h2 {
-  font-weight: 700; font-size: 1.55em;
-  color: var(--red); margin-bottom: 0.6em;
-  letter-spacing: -0.03em; line-height: 1.3;
+  font-weight: 600; font-size: 1.5em;
+  color: var(--red); margin-bottom: 0.85em;
+  letter-spacing: -0.02em; line-height: 1.3;
 }
 .reveal h3 {
-  font-weight: 600; font-size: 0.88em;
-  color: var(--burgundy); margin-bottom: 0.45em;
-  line-height: 1.3;
+  font-weight: 500; font-size: 0.85em;
+  color: var(--burgundy); margin-bottom: 0.55em;
+  line-height: 1.35;
 }
 .reveal p, .reveal li {
-  font-weight: 400; font-size: 0.65em;
-  line-height: 1.55; color: inherit;
+  font-weight: 400; font-size: 0.62em;
+  line-height: 1.65; color: inherit;
 }
-.reveal p + p { margin-top: 0.35em; }
-.reveal ul { list-style: none; padding-left: 0; margin: 0.2em 0 0.4em; }
-.reveal ul li { position: relative; padding-left: 1em; margin-bottom: 0.3em; }
+.reveal p + p { margin-top: 0.5em; }
+.reveal ul { list-style: none; padding-left: 0; margin: 0.3em 0 0.6em; }
+.reveal ul li { position: relative; padding-left: 1em; margin-bottom: 0.4em; }
 .reveal ul li::before {
   content: ''; position: absolute;
-  left: 0; top: 0.55em;
-  width: 5px; height: 5px;
-  border-radius: 50%; background: var(--red);
+  left: 0; top: 0.6em;
+  width: 4px; height: 4px;
+  border-radius: 50%; background: var(--red); opacity: 0.5;
 }
 .reveal .slide-number {
   font-size: 12px; color: var(--red);
@@ -81,10 +78,7 @@
 .t-espresso h2 { color: var(--cream) !important; }
 
 .t-cream { background: var(--cream-bg) !important; }
-.t-cream h2 { color: var(--red) !important; }
-
 .t-sand { background: var(--sand-bg) !important; }
-.t-sand h2 { color: var(--red) !important; }
 
 .t-red { background: var(--red) !important; color: var(--cream) !important; }
 .t-red h2 { color: var(--cream) !important; }
@@ -92,28 +86,27 @@
 .t-brown { background: var(--espresso) !important; color: var(--cream) !important; }
 .t-brown h2 { color: var(--cream) !important; }
 
-/* ── Layout helpers ── */
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
-.gap-sm { gap: 14px; }
+/* ── Layout ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+.gap-sm { gap: 16px; }
 .align-center { align-items: center; }
 .v-center { display: flex; flex-direction: column; justify-content: center; height: 100%; }
 
 .section-label { display: none; }
-
 .divider { display: none; }
 
 /* ── Image ── */
 .img-cover {
   width: 100%; height: 100%;
   object-fit: cover; border-radius: 10px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 .img-screenshot {
   width: 100%; border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
 }
 .img-full {
   position: absolute; inset: 0;
@@ -130,21 +123,21 @@
 .slide-title .content {
   position: relative; z-index: 2;
   display: flex; flex-direction: column; justify-content: center;
-  height: 100%; padding: 64px 72px; max-width: 60%;
+  height: 100%; padding: 72px 80px; max-width: 60%;
 }
 .slide-title .tagline {
-  font-size: 0.42em; font-weight: 500;
+  font-size: 0.4em; font-weight: 400;
   letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--coral); margin-bottom: 1em;
+  color: var(--coral); margin-bottom: 1.2em;
 }
 .slide-title h1 {
-  font-weight: 700; font-size: 2.8em;
+  font-weight: 600; font-size: 2.6em;
   color: var(--cream) !important; letter-spacing: -0.03em;
-  line-height: 1.15; margin: 0 0 0.3em;
+  line-height: 1.2; margin: 0 0 0.4em;
 }
 .slide-title .subtitle {
-  font-size: 0.65em; font-weight: 300;
-  color: var(--sand); line-height: 1.5;
+  font-size: 0.6em; font-weight: 300;
+  color: var(--sand); line-height: 1.6;
 }
 
 /* ── Cards ── */
@@ -154,77 +147,76 @@
   border: 1px solid rgba(206,185,164,0.12);
 }
 .card-img { width: 100%; height: 120px; object-fit: cover; display: block; }
-.card-body { padding: 14px 16px; }
+.card-body { padding: 18px 20px; }
 .card-body .tag {
-  font-size: 0.42em; font-weight: 500;
-  color: var(--coral); display: block; margin-bottom: 0.1em;
-  opacity: 0.8;
+  font-size: 0.4em; font-weight: 400;
+  color: var(--coral); display: block; margin-bottom: 0.3em;
+  opacity: 0.75;
 }
-.card-body h3 { font-size: 0.82em; font-weight: 600; margin-bottom: 0.1em; }
-.card-body p { font-size: 0.5em; line-height: 1.5; opacity: 0.8; }
+.card-body h3 { font-size: 0.78em; font-weight: 500; margin-bottom: 0.3em; }
+.card-body p { font-size: 0.48em; line-height: 1.6; opacity: 0.75; }
 
-.t-cream .card { background: #fff; border-color: rgba(0,0,0,0.06); }
+.t-cream .card { background: #fff; border-color: rgba(0,0,0,0.05); }
 
 /* ── Channel ── */
-.ch { display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.2em; }
-.ch-name { font-weight: 600; font-size: 0.55em; color: var(--red); white-space: nowrap; }
+.ch { display: flex; align-items: baseline; gap: 10px; margin-bottom: 0.35em; }
+.ch-name { font-weight: 500; font-size: 0.52em; color: var(--red); white-space: nowrap; }
 .t-dark .ch-name { color: var(--coral); }
-.ch-desc { font-size: 0.5em; line-height: 1.5; opacity: 0.75; }
+.ch-desc { font-size: 0.48em; line-height: 1.5; opacity: 0.65; }
 
 /* ── Highlight box ── */
 .hl {
   background: var(--red); color: var(--cream);
-  padding: 16px 20px; border-radius: 10px;
+  padding: 20px 24px; border-radius: 10px;
+  margin-top: 0.5em;
 }
 .hl p { color: var(--cream) !important; }
 
 /* ── Rule grid ── */
 .rule {
-  text-align: center; padding: 12px 8px;
+  text-align: center; padding: 14px 10px;
   background: rgba(152,0,0,0.04); border-radius: 10px;
 }
-.rule .icon { font-size: 1.2em; display: block; margin-bottom: 0.15em; }
-.rule .name { font-weight: 600; font-size: 0.58em; color: var(--red); display: block; margin-bottom: 0.08em; }
-.rule .detail { font-size: 0.44em; line-height: 1.5; opacity: 0.65; }
-.rule-highlight {
-  background: var(--red) !important;
-}
+.rule .icon { font-size: 1.1em; display: block; margin-bottom: 0.2em; }
+.rule .name { font-weight: 500; font-size: 0.55em; color: var(--red); display: block; margin-bottom: 0.12em; }
+.rule .detail { font-size: 0.42em; line-height: 1.55; opacity: 0.6; }
+.rule-highlight { background: var(--red) !important; }
 .rule-highlight .name { color: var(--cream) !important; }
-.rule-highlight .detail { color: var(--cream) !important; opacity: 0.85; }
+.rule-highlight .detail { color: var(--cream) !important; opacity: 0.8; }
 
 /* ── 4L ── */
 .l-card {
-  padding: 16px 18px; border-radius: 12px;
+  padding: 20px 22px; border-radius: 12px;
   background: var(--red); color: var(--cream);
 }
-.l-card .letter { font-size: 0.9em; font-weight: 700; color: var(--cream); display: block; margin-bottom: 0.05em; }
-.l-card .meaning { font-size: 0.48em; font-weight: 400; color: rgba(225,218,201,0.8); }
+.l-card .letter { font-size: 0.85em; font-weight: 600; color: var(--cream); display: block; margin-bottom: 0.15em; }
+.l-card .meaning { font-size: 0.46em; font-weight: 400; color: rgba(225,218,201,0.75); }
 
 /* ── Benefit ── */
 .ben {
   background: rgba(152,0,0,0.03); border-radius: 10px;
-  padding: 0; border: 1px solid rgba(0,0,0,0.06);
+  padding: 0; border: 1px solid rgba(0,0,0,0.05);
   overflow: hidden;
 }
 .ben-img { width: 100%; height: 90px; object-fit: cover; display: block; }
-.ben-body { padding: 12px 14px; }
-.ben-body h3 { font-size: 0.65em; font-weight: 600; margin-bottom: 0.1em; color: var(--red); }
-.ben-body p { font-size: 0.48em; line-height: 1.5; }
+.ben-body { padding: 14px 16px; }
+.ben-body h3 { font-size: 0.6em; font-weight: 500; margin-bottom: 0.15em; color: var(--red); }
+.ben-body p { font-size: 0.46em; line-height: 1.55; }
 
 /* ── Timeline ── */
 .timeline { position: relative; padding-left: 24px; }
 .timeline::before {
   content: ''; position: absolute; left: 7px; top: 4px; bottom: 4px;
-  width: 2px; background: var(--red); opacity: 0.2;
+  width: 2px; background: var(--red); opacity: 0.15;
 }
-.tl-item { position: relative; margin-bottom: 0.45em; }
+.tl-item { position: relative; margin-bottom: 0.6em; }
 .tl-item::before {
   content: ''; position: absolute; left: -21px; top: 6px;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--red);
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--red); opacity: 0.6;
 }
-.tl-year { font-size: 0.52em; font-weight: 600; color: var(--red); }
-.tl-desc { font-size: 0.5em; opacity: 0.75; }
+.tl-year { font-size: 0.5em; font-weight: 500; color: var(--red); }
+.tl-desc { font-size: 0.48em; opacity: 0.7; }
 
 /* ── Ending ── */
 .slide-end {
@@ -235,11 +227,8 @@
 }
 .slide-end .v-center { padding: 64px; }
 .slide-end h2 {
-  font-size: 2.4em; font-weight: 700;
-  color: var(--cream) !important; line-height: 1.25; letter-spacing: -0.03em;
-}
-.slide-end .footer {
-  font-size: 0.42em; opacity: 0.35; margin-top: 2em;
+  font-size: 2.2em; font-weight: 600;
+  color: var(--cream) !important; line-height: 1.3; letter-spacing: -0.03em;
 }
 
 /* ── Fragments ── */
@@ -250,15 +239,17 @@
 .reveal .slides section .fragment.fade-up.visible {
   transform: translateY(0); opacity: 1;
 }
+
+/* ── Table ── */
+.reveal table { border-collapse: collapse; }
+.reveal table td { border: none; }
 </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- ═══════════════════════════════════════════
-     1. TITLE
-     ═══════════════════════════════════════════ -->
+<!-- 1. TITLE -->
 <section class="slide-title t-espresso">
   <img class="img-full" src="https://cdn.imweb.me/thumbnail/20240710/503f92d07fb78.jpg" alt="">
   <div class="overlay"></div>
@@ -269,37 +260,35 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     2. WELCOME & TIMETABLE
-     ═══════════════════════════════════════════ -->
+<!-- 2. WELCOME & TIMETABLE -->
 <section class="t-cream">
-  <div class="section-label">Welcome</div>
   <h2>반갑습니다.</h2>
 
   <div class="grid-2 align-center">
     <div>
       <p>오늘은 HFK를 소개하고, 시즌 참여 방법을 안내 드립니다.<br>그리고 멤버들과 자기 소개를 나눕니다.</p>
-      <p style="margin-top:0.5em; font-weight:600; font-size:0.6em;">타임테이블</p>
-      <table style="width:100%; font-size:0.52em; margin-top:0.25em; border-collapse:collapse;">
-        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-          <td style="padding:6px 0; font-weight:600; width:140px; color:var(--red);">19:30 – 19:50</td>
-          <td style="padding:6px 0;">HFK 소개</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-          <td style="padding:6px 0; font-weight:600; color:var(--red);">19:50 – 20:00</td>
-          <td style="padding:6px 0;">운영진 소개</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-          <td style="padding:6px 0; font-weight:600; color:var(--red);">20:00 – 20:50</td>
-          <td style="padding:6px 0;">참석자 소개</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-          <td style="padding:6px 0; font-weight:600; color:var(--red);">20:50 – 20:55</td>
-          <td style="padding:6px 0;">최근 공지 안내</td>
+
+      <p style="margin-top:0.8em; font-weight:500; font-size:0.58em; color:var(--burgundy);">타임테이블</p>
+      <table style="width:100%; font-size:0.5em; margin-top:0.4em;">
+        <tr>
+          <td style="padding:8px 0; font-weight:500; width:140px; color:var(--red);">19:30 – 19:50</td>
+          <td style="padding:8px 0;">HFK 소개</td>
         </tr>
         <tr>
-          <td style="padding:6px 0; font-weight:600; color:var(--red);">20:55 – 21:00</td>
-          <td style="padding:6px 0;">명함 교환 & 네트워킹</td>
+          <td style="padding:8px 0; font-weight:500; color:var(--red);">19:50 – 20:00</td>
+          <td style="padding:8px 0;">운영진 소개</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0; font-weight:500; color:var(--red);">20:00 – 20:50</td>
+          <td style="padding:8px 0;">참석자 소개</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0; font-weight:500; color:var(--red);">20:50 – 20:55</td>
+          <td style="padding:8px 0;">최근 공지 안내</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0; font-weight:500; color:var(--red);">20:55 – 21:00</td>
+          <td style="padding:8px 0;">명함 교환 & 네트워킹</td>
         </tr>
       </table>
     </div>
@@ -309,37 +298,32 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     3. MISSION & VISION
-     ═══════════════════════════════════════════ -->
+<!-- 3. MISSION & VISION -->
 <section class="t-dark">
-  <div class="section-label">About HFK</div>
   <h2>HFK 소개</h2>
 
-  <div class="grid-2" style="gap:36px;">
+  <div class="grid-2" style="gap:48px;">
     <div>
-      <h3 style="color:var(--coral) !important; font-size:0.68em;">Mission</h3>
-      <p style="font-weight:600; font-size:0.7em; line-height:1.35; margin-bottom:0.3em;">실무 리더가 더 깊이 성장할 수 있는<br>질문과 환경을 만든다.</p>
-      <p style="line-height:1.55;">본질적인 질문을 함께 탐구하고<br>서로의 경험과 관점을 교차시키며<br>사고의 깊이를 확장하는 커뮤니티입니다.</p>
+      <h3 style="color:var(--coral) !important; font-size:0.65em;">Mission</h3>
+      <p style="font-weight:500; font-size:0.68em; line-height:1.4; margin-bottom:0.5em;">실무 리더가 더 깊이 성장할 수 있는<br>질문과 환경을 만든다.</p>
+      <p>본질적인 질문을 함께 탐구하고<br>서로의 경험과 관점을 교차시키며<br>사고의 깊이를 확장하는 커뮤니티입니다.</p>
     </div>
     <div>
-      <h3 style="color:var(--coral) !important; font-size:0.68em;">Vision</h3>
-      <p style="font-weight:600; font-size:0.7em; line-height:1.35; margin-bottom:0.3em;">실무 리더의 성장을 설계하는<br>가장 신뢰받는 커뮤니티가 된다.</p>
-      <p style="line-height:1.55;">서울 정동을 기반으로<br>다양한 산업의 실무 리더들이 모여<br>질문을 나누고, 관점을 확장하며<br>자신의 경험을 기록으로 남기는 리더 성장의 플랫폼.</p>
+      <h3 style="color:var(--coral) !important; font-size:0.65em;">Vision</h3>
+      <p style="font-weight:500; font-size:0.68em; line-height:1.4; margin-bottom:0.5em;">실무 리더의 성장을 설계하는<br>가장 신뢰받는 커뮤니티가 된다.</p>
+      <p>서울 정동을 기반으로<br>다양한 산업의 실무 리더들이 모여<br>질문을 나누고, 관점을 확장하며<br>자신의 경험을 기록으로 남기는 리더 성장의 플랫폼.</p>
     </div>
   </div>
-  <div style="margin-top:0.5em; display:flex; align-items:center; gap:16px;">
-    <div style="background:rgba(255,97,84,0.15); color:var(--coral); padding:8px 18px; border-radius:20px; font-size:0.48em; font-weight:500;">2013년 HBR을 읽는 모임으로 시작</div>
-    <span style="color:var(--coral); font-size:0.55em;">&rarr;</span>
-    <div style="background:rgba(255,97,84,0.15); color:var(--coral); padding:8px 18px; border-radius:20px; font-size:0.48em; font-weight:500;">현재 3개월 시즌제 커뮤니티</div>
+
+  <div style="margin-top:0.8em; display:flex; align-items:center; gap:16px;">
+    <div style="background:rgba(255,97,84,0.12); color:var(--coral); padding:8px 20px; border-radius:20px; font-size:0.46em; font-weight:400;">2013년 HBR을 읽는 모임으로 시작</div>
+    <span style="color:var(--coral); font-size:0.5em; opacity:0.5;">&rarr;</span>
+    <div style="background:rgba(255,97,84,0.12); color:var(--coral); padding:8px 20px; border-radius:20px; font-size:0.46em; font-weight:400;">현재 3개월 시즌제 커뮤니티</div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     4. HISTORY
-     ═══════════════════════════════════════════ -->
+<!-- 4. HISTORY -->
 <section class="t-cream">
-  <div class="section-label">History</div>
   <h2>HFK의 여정</h2>
 
   <div class="grid-2 align-center">
@@ -367,18 +351,15 @@
     </div>
     <div>
       <a href="https://www.youtube.com/@HFK" target="_blank" style="display:block; text-decoration:none;">
-        <img class="img-cover" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/88d56a0705863.png" alt="HFK 활동" style="height: 290px; filter:brightness(1.1);">
+        <img class="img-cover" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/88d56a0705863.png" alt="HFK 활동" style="height: 280px; filter:brightness(1.1);">
       </a>
-      <p style="font-size:0.42em; opacity:0.5; margin-top:0.25em;">웹사이트 지난시즌 페이지와 유튜브, 인스타그램에서 예전 HFK의 활동을 확인해 보실 수 있습니다.</p>
+      <p style="font-size:0.4em; opacity:0.45; margin-top:0.4em;">웹사이트 지난시즌 페이지와 유튜브, 인스타그램에서 예전 HFK의 활동을 확인해 보실 수 있습니다.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     5. 팀, 이벤트, 클럽 개요
-     ═══════════════════════════════════════════ -->
+<!-- 5. 팀, 이벤트, 클럽 개요 -->
 <section class="t-dark">
-  <div class="section-label">Structure</div>
   <h2>팀, 이벤트, 클럽</h2>
 
   <div class="grid-3">
@@ -409,46 +390,44 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     6. 팀 상세
-     ═══════════════════════════════════════════ -->
+<!-- 6. 팀 상세 -->
 <section class="t-cream">
-  <div class="section-label">Team Detail</div>
   <h2>팀</h2>
 
   <div class="grid-2 align-center">
     <div>
-      <p style="margin-bottom:0.4em;">경영 전략, 리더십, 커리어 등 시의적절한 주제를 중심으로 기획됩니다.</p>
-      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.2em;">진행 방식</p>
-      <ul style="margin-bottom:0.4em;">
+      <p style="margin-bottom:0.6em;">경영 전략, 리더십, 커리어 등 시의적절한 주제를 중심으로 기획됩니다.</p>
+
+      <p style="font-size:0.56em; font-weight:500; color:var(--red); margin-bottom:0.25em;">진행 방식</p>
+      <ul style="margin-bottom:0.6em;">
         <li>토론형 — 주제에 대해 멤버들과 깊이 있는 대화</li>
         <li>강의형 — 해당 분야 전문 파트너의 강의</li>
         <li>워크숍형 — 실습과 결과물 중심의 모임</li>
       </ul>
-      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.2em;">팀 어드벤처</p>
+
+      <p style="font-size:0.56em; font-weight:500; color:var(--red); margin-bottom:0.25em;">팀 어드벤처</p>
       <p>두 번째 달부터 다른 팀의 세션을 청강할 수 있습니다.<br>자신의 팀을 제외하고 모든 팀에 1번씩 참여 가능합니다.</p>
     </div>
     <img class="img-cover" src="https://cdn.imweb.me/thumbnail/20250809/0b1be3d7ee166.png" alt="팀 활동" style="height:300px;">
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     7. 이벤트 & 클럽 상세
-     ═══════════════════════════════════════════ -->
+<!-- 7. 이벤트 & 클럽 상세 -->
 <section class="t-sand">
-  <div class="section-label">Event &amp; Club</div>
   <h2>이벤트와 클럽</h2>
 
-  <div class="grid-2" style="gap:32px;">
+  <div class="grid-2" style="gap:44px;">
     <div>
       <h3 style="color:var(--red) !important;">이벤트</h3>
-      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.2em;">월별 세미나</p>
-      <ul style="margin-bottom:0.4em;">
+
+      <p style="font-size:0.54em; font-weight:400; color:var(--burgundy); margin-bottom:0.25em;">월별 세미나</p>
+      <ul style="margin-bottom:0.6em;">
         <li>PEST 브리핑 — 정치·경제·사회·기술 이슈 (시즌 1회)</li>
         <li>AAR 밋업 — 멤버 프로젝트 기획/운영기 발표 (시즌 1회)</li>
         <li>HBR 브리핑 — 멤버가 추천하는 HBR 아티클 (시즌 1회)</li>
       </ul>
-      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.2em;">정기 이벤트</p>
+
+      <p style="font-size:0.54em; font-weight:400; color:var(--burgundy); margin-bottom:0.25em;">정기 이벤트</p>
       <ul>
         <li>저자 북토크 — 저자를 직접 만나 대화 (매달 1회)</li>
         <li>스페셜 토크 — 멤버·파트너·운영진 초대 기획 (상시)</li>
@@ -456,103 +435,92 @@
     </div>
     <div>
       <h3 style="color:var(--red) !important;">클럽</h3>
-      <p style="margin-bottom:0.3em;">멤버들이 자발적으로 기획하고 운영하는 소모임입니다.<br>시즌 시작 후 첫 달 중순에 모집합니다.</p>
-      <img class="img-cover" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/f475fa36b62a7.png" alt="클럽 활동" style="height:150px; margin-top:0.15em;">
-      <p style="font-size:0.42em; opacity:0.5; margin-top:0.1em;">와인, 하이킹, 전시, 독서, 운동 등. 신청: 구글폼</p>
+      <p style="margin-bottom:0.5em;">멤버들이 자발적으로 기획하고 운영하는 소모임입니다.<br>시즌 시작 후 첫 달 중순에 모집합니다.</p>
+      <img class="img-cover" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/f475fa36b62a7.png" alt="클럽 활동" style="height:150px;">
+      <p style="font-size:0.4em; opacity:0.45; margin-top:0.3em;">와인, 하이킹, 전시, 독서, 운동 등. 신청: 구글폼</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     8. 슬랙 소개
-     ═══════════════════════════════════════════ -->
+<!-- 8. 슬랙 소개 -->
 <section class="t-cream">
-  <div class="section-label">Communication</div>
   <h2>슬랙</h2>
 
   <div class="grid-2 align-center">
     <div>
-      <p style="margin-bottom:0.4em;">HFK의 모든 공지, 신청, 교류는 슬랙(Slack)을 통해 이루어집니다.</p>
+      <p style="margin-bottom:0.6em;">HFK의 모든 공지, 신청, 교류는 슬랙(Slack)을 통해 이루어집니다.</p>
       <div class="hl">
-        <p style="font-size:0.55em; font-weight:600;">프로필 수정 (필수)</p>
-        <p style="font-size:0.48em; margin-top:0.1em;">Display Name: 이름_팀명<br>What I do: 회사명<br>알람 허용 &middot; 채널 확인</p>
+        <p style="font-size:0.52em; font-weight:500;">프로필 수정 (필수)</p>
+        <p style="font-size:0.46em; margin-top:0.2em;">Display Name: 이름_팀명<br>What I do: 회사명<br>알람 허용 · 채널 확인</p>
       </div>
     </div>
     <div>
-      <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/55311439b27e3.png" alt="슬랙 프로필" style="margin-bottom:8px;">
+      <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/55311439b27e3.png" alt="슬랙 프로필" style="margin-bottom:12px;">
       <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/e7658ce03fd68.png" alt="슬랙 채널">
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     9. 슬랙 채널 안내
-     ═══════════════════════════════════════════ -->
+<!-- 9. 슬랙 채널 안내 -->
 <section class="t-dark">
-  <div class="section-label">Slack Channels</div>
   <h2>슬랙 채널 구조</h2>
 
-  <div class="grid-2" style="gap:32px;">
+  <div class="grid-2" style="gap:44px;">
     <div>
-      <h3 style="font-size:0.72em; margin-bottom:0.15em;"><span style="color:var(--coral);">0번</span> 전체 멤버 채널</h3>
+      <h3 style="font-size:0.68em; margin-bottom:0.3em;"><span style="color:var(--coral);">0번</span> 전체 멤버 채널</h3>
       <div class="ch"><span class="ch-name">#0--공지-확인</span><span class="ch-desc">전체 공지</span></div>
       <div class="ch"><span class="ch-name">#0--교류-게시판</span><span class="ch-desc">정보 교류, 뉴스, 채용 등</span></div>
-      <div class="ch" style="margin-bottom:0.4em;"><span class="ch-name">#0--자주-묻는-질문</span><span class="ch-desc">FAQ 모음</span></div>
+      <div class="ch" style="margin-bottom:0.7em;"><span class="ch-name">#0--자주-묻는-질문</span><span class="ch-desc">FAQ 모음</span></div>
 
-      <h3 style="font-size:0.72em; margin-bottom:0.15em;"><span style="color:var(--coral);">1번</span> 현재 시즌 채널</h3>
+      <h3 style="font-size:0.68em; margin-bottom:0.3em;"><span style="color:var(--coral);">1번</span> 현재 시즌 채널</h3>
       <div class="ch"><span class="ch-name">#1--시즌-공지-확인</span><span class="ch-desc">매주 일요일 밤 9시 시즌레터</span></div>
       <div class="ch"><span class="ch-name">#1--어드벤처-신청</span><span class="ch-desc">다른 팀 청강 (팀당 1회)</span></div>
       <div class="ch"><span class="ch-name">#1--각 팀별 채널</span><span class="ch-desc">회차별 공지</span></div>
     </div>
     <div>
-      <h3 style="font-size:0.72em; margin-bottom:0.15em;"><span style="color:var(--coral);">2번</span> 이벤트 채널</h3>
+      <h3 style="font-size:0.68em; margin-bottom:0.3em;"><span style="color:var(--coral);">2번</span> 이벤트 채널</h3>
       <div class="ch"><span class="ch-name">#2--aar밋업</span><span class="ch-desc">프로젝트 기획/운영기 (시즌 1회)</span></div>
       <div class="ch"><span class="ch-name">#2--hbr브리핑</span><span class="ch-desc">HBR 아티클 브리핑 (시즌 1회)</span></div>
       <div class="ch"><span class="ch-name">#2--pest브리핑</span><span class="ch-desc">정치·경제·사회·기술 (시즌 1회)</span></div>
       <div class="ch"><span class="ch-name">#2--스페셜토크</span><span class="ch-desc">초대 기획 이벤트</span></div>
-      <div class="ch" style="margin-bottom:0.4em;"><span class="ch-name">#2--저자북토크</span><span class="ch-desc">저자와 직접 대화 (시즌 3회)</span></div>
+      <div class="ch" style="margin-bottom:0.7em;"><span class="ch-name">#2--저자북토크</span><span class="ch-desc">저자와 직접 대화 (시즌 3회)</span></div>
 
-      <h3 style="font-size:0.72em; margin-bottom:0.15em;"><span style="color:var(--coral);">3번</span> 클럽 채널</h3>
+      <h3 style="font-size:0.68em; margin-bottom:0.3em;"><span style="color:var(--coral);">3번</span> 클럽 채널</h3>
       <div class="ch"><span class="ch-name">#3--클럽</span><span class="ch-desc">클럽 공지 & 어드벤처(놀러가기) 신청</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     10. 참여 방법
-     ═══════════════════════════════════════════ -->
+<!-- 10. 참여 방법 -->
 <section class="t-sand">
-  <div class="section-label">How to Participate</div>
   <h2>참여 방법</h2>
 
   <div class="grid-2 align-center">
     <div>
-      <p style="font-weight:500; margin-bottom:0.3em;">매주 일요일 밤 9시, 시즌레터</p>
-      <ul style="margin-bottom:0.4em;">
+      <p style="font-weight:500; margin-bottom:0.5em;">매주 일요일 밤 9시, 시즌레터</p>
+      <ul style="margin-bottom:0.6em;">
         <li>한 주간 HFK 소식 요약</li>
         <li>차주 진행될 세션 안내</li>
         <li>신청 가능한 이벤트 안내</li>
       </ul>
-      <p style="margin-bottom:0.2em;">참석 여부는 이모지로 표시해주세요.</p>
-      <p style="font-size:0.48em; opacity:0.7;">🙆‍♀️ 참석 &middot; 🙅 불참 &middot; 🤔 뒤풀이</p>
+
+      <p style="margin-bottom:0.3em;">참석 여부는 이모지로 표시해주세요.</p>
+      <p style="font-size:0.46em; opacity:0.65;">🙆‍♀️ 참석 · 🙅 불참 · 🤔 뒤풀이</p>
     </div>
     <div>
-      <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/d9bdc8c966588.png" alt="공지 예시" style="margin-bottom:6px;">
-      <p style="font-size:0.4em; opacity:0.45; text-align:center;">팀 채널 1회차 공지 예시</p>
+      <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/d9bdc8c966588.png" alt="공지 예시" style="margin-bottom:8px;">
+      <p style="font-size:0.38em; opacity:0.4; text-align:center;">팀 채널 1회차 공지 예시</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     11. 자기소개 미션
-     ═══════════════════════════════════════════ -->
+<!-- 11. 자기소개 미션 -->
 <section class="t-cream">
-  <div class="section-label">Introduce Yourself</div>
   <h2>자기 소개 미션</h2>
 
   <div class="grid-2 align-center">
     <div>
-      <p style="font-weight:500; margin-bottom:0.3em;">첫 세션 전까지 슬랙에 자기소개를 남겨주세요.</p>
+      <p style="font-weight:400; margin-bottom:0.5em;">첫 세션 전까지 슬랙에 자기소개를 남겨주세요.</p>
       <ul>
         <li>어느 회사에서 어떤 일을 하시나요?</li>
         <li>HFK를 알게 된 경로와 등록 동기는?</li>
@@ -560,23 +528,20 @@
         <li>자신의 일을 한 줄로 표현한다면?</li>
         <li>최근 인상 깊었던 콘텐츠와 즐겨찾는 공간은?</li>
       </ul>
-      <p style="font-size:0.45em; opacity:0.55; margin-top:0.3em;">(작성하신 자기소개는 3개월 뒤 자동으로 삭제됩니다.)</p>
+      <p style="font-size:0.42em; opacity:0.5; margin-top:0.5em;">(작성하신 자기소개는 3개월 뒤 자동으로 삭제됩니다.)</p>
     </div>
     <img class="img-screenshot" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/052e5e95155c9.png" alt="자기소개 미션">
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     12. 카카오톡 & 오픈채팅방
-     ═══════════════════════════════════════════ -->
+<!-- 12. 카카오톡 & 오픈채팅방 -->
 <section class="t-sand">
-  <div class="section-label">Networking</div>
   <h2>클럽과 오픈 채팅방</h2>
 
-  <div class="grid-2" style="gap:32px;">
+  <div class="grid-2" style="gap:44px;">
     <div>
       <h3 style="color:var(--red) !important;">카카오톡</h3>
-      <ul style="margin-bottom:0.25em;">
+      <ul style="margin-bottom:0.5em;">
         <li>공지 카톡방 — 운영진만 공지를 남길 수 있는 카톡방.<br>시즌레터 요약과 이벤트를 별도로 안내합니다.</li>
         <li>오픈채팅방 — HFK에 등록한 적 있는 많은 멤버가 모인 오픈카톡방.<br>아침 뉴스클리핑, 커리어 고민, 식당 추천 등 자유로운 교류.</li>
       </ul>
@@ -584,18 +549,18 @@
     </div>
     <div>
       <h3 style="color:var(--red) !important;">목적</h3>
-      <table style="width:100%; font-size:0.5em; border-collapse:collapse; margin-bottom:0.25em;">
-        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-          <td style="padding:7px 0; font-weight:600; width:60px; color:var(--red);">취지</td>
-          <td style="padding:7px 0;">HFK 멤버들의 지속적인 네트워킹</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-          <td style="padding:7px 0; font-weight:600; color:var(--red);">공지</td>
-          <td style="padding:7px 0;">시즌 공지 채널 및 공지 단톡방</td>
+      <table style="width:100%; font-size:0.48em; margin-bottom:0.5em;">
+        <tr>
+          <td style="padding:10px 0; font-weight:500; width:60px; color:var(--red); vertical-align:top;">취지</td>
+          <td style="padding:10px 0;">HFK 멤버들의 지속적인 네트워킹</td>
         </tr>
         <tr>
-          <td style="padding:7px 0; font-weight:600; color:var(--red);">신청</td>
-          <td style="padding:7px 0;">클럽: 구글폼 / 오픈채팅방: 링크</td>
+          <td style="padding:10px 0; font-weight:500; color:var(--red); vertical-align:top;">공지</td>
+          <td style="padding:10px 0;">시즌 공지 채널 및 공지 단톡방</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0; font-weight:500; color:var(--red); vertical-align:top;">신청</td>
+          <td style="padding:10px 0;">클럽: 구글폼 / 오픈채팅방: 링크</td>
         </tr>
       </table>
       <img class="img-cover" src="https://cdn.imweb.me/upload/S20240629fee25a0bc999e/dd9f5b15e5fb8.png" alt="클럽 활동" style="height:120px;">
@@ -603,57 +568,51 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     13. 그라운드룰
-     ═══════════════════════════════════════════ -->
+<!-- 13. 그라운드룰 -->
 <section class="t-cream">
-  <div class="section-label">Ground Rules</div>
   <h2>그라운드룰</h2>
-  <p style="font-size:0.52em; opacity:0.6; margin-bottom:0.3em;">다양한 산업, 직무, 연령대가 모이는 HFK에서 서로의 성장을 위해 지켜주세요.</p>
+  <p style="font-size:0.5em; opacity:0.55; margin-bottom:0.5em;">다양한 산업, 직무, 연령대가 모이는 HFK에서 서로의 성장을 위해 지켜주세요.</p>
 
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-    <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+    <div class="rule fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px;">
       <span class="icon" style="margin:0; font-size:1em;">🤝</span>
       <div><span class="name">호칭</span><span class="detail">직급, 나이를 떠나 서로 '님'으로 불러요.</span></div>
     </div>
-    <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
+    <div class="rule fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px;">
       <span class="icon" style="margin:0; font-size:1em;">📋</span>
       <div><span class="name">명칭</span><span class="detail">수업, 클래스 대신 '팀', '세션'이라고 해요.</span></div>
     </div>
-    <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
+    <div class="rule fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px;">
       <span class="icon" style="margin:0; font-size:1em;">💬</span>
       <div><span class="name">존중</span><span class="detail">나와 다른 생각은 사고의 폭을 넓혀줍니다.</span></div>
     </div>
-    <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
+    <div class="rule fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px;">
       <span class="icon" style="margin:0; font-size:1em;">🤫</span>
       <div><span class="name">비밀</span><span class="detail">Off the record. 이곳에서 들은 이야기는.</span></div>
     </div>
-    <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
+    <div class="rule fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px;">
       <span class="icon" style="margin:0; font-size:1em;">👋</span>
       <div><span class="name">환대</span><span class="detail">먼저 반갑게 인사를 건네주세요.</span></div>
     </div>
-    <div class="rule fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px;">
+    <div class="rule fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px;">
       <span class="icon" style="margin:0; font-size:1em;">📝</span>
       <div><span class="name">과제</span><span class="detail">성장하기 위해 모인만큼 과제는 충실히.</span></div>
     </div>
-    <div class="rule rule-highlight fragment fade-up" style="text-align:left; padding:10px 14px; display:flex; align-items:center; gap:10px; grid-column: span 2;">
+    <div class="rule rule-highlight fragment fade-up" style="text-align:left; padding:12px 16px; display:flex; align-items:center; gap:12px; grid-column: span 2;">
       <span class="icon" style="margin:0; font-size:1em;">📖</span>
       <div><span class="name">기록</span><span class="detail">기록할 때 비로소 자신의 것이 돼요. (4L Review)</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     14. 4L 리뷰
-     ═══════════════════════════════════════════ -->
+<!-- 14. 4L 리뷰 -->
 <section class="t-sand">
-  <div class="section-label">Review Culture</div>
   <h2>4L Review</h2>
 
-  <div class="grid-2" style="gap:28px;">
+  <div class="grid-2" style="gap:40px;">
     <div>
       <p>모임이 끝난 후, 슬랙에 4L 리뷰를 남겨주세요.<br>4개의 관점으로 그날의 경험을 정리하는 방법입니다.</p>
-      <p style="margin-top:0.3em; font-weight:500;">기록할 때 비로소 자신의 것이 됩니다.</p>
+      <p style="margin-top:0.5em; font-weight:400;">기록할 때 비로소 자신의 것이 됩니다.</p>
     </div>
     <div class="grid-2 gap-sm">
       <div class="l-card fragment fade-up">
@@ -676,11 +635,8 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     15. 멤버 혜택
-     ═══════════════════════════════════════════ -->
+<!-- 15. 멤버 혜택 -->
 <section class="t-cream">
-  <div class="section-label">Benefits</div>
   <h2>HFK 멤버만을 위한 혜택</h2>
 
   <div class="grid-4">
@@ -715,31 +671,26 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     16. 참석자 소개 가이드
-     ═══════════════════════════════════════════ -->
+<!-- 16. 참석자 소개 가이드 -->
 <section class="t-brown">
   <div class="v-center" style="text-align:center; align-items:center;">
-    <div class="section-label" style="color:rgba(225,218,201,0.5);">Introduce</div>
-    <h2 style="font-size:2em; color:var(--cream) !important; margin-bottom:0.5em;">지금부터<br>서로 소개하는 시간입니다.</h2>
-    <p style="font-size:0.58em; color:var(--sand); max-width:500px; margin:0 auto;">
+    <h2 style="font-size:1.9em; color:var(--cream) !important; margin-bottom:0.6em;">지금부터<br>서로 소개하는 시간입니다.</h2>
+    <p style="font-size:0.55em; color:var(--sand); max-width:500px; margin:0 auto; line-height:1.8;">
       이름 / 회사 / 직무<br>
       HFK를 알게 된 경로와 등록 동기<br>
       이번 시즌 팀에서 얻고 싶은 것
     </p>
-    <p style="font-size:0.42em; color:rgba(206,185,164,0.5); margin-top:0.7em;">30분 진행</p>
+    <p style="font-size:0.4em; color:rgba(206,185,164,0.45); margin-top:1em;">30분 진행</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     17. 네트워킹
-     ═══════════════════════════════════════════ -->
+<!-- 17. 네트워킹 -->
 <section class="t-espresso" style="padding:0 !important; position:relative;">
   <img class="img-full" src="https://cdn.imweb.me/thumbnail/20240710/503f92d07fb78.jpg" alt="" style="opacity:0.3;">
-  <div class="v-center" style="position:relative; z-index:2; text-align:center; align-items:center; padding:64px;">
-    <h2 style="font-size:2.2em; color:var(--cream) !important; margin-bottom:0.5em;">명함 교환 &<br>네트워킹</h2>
-    <p style="font-size:0.58em; color:var(--sand);">지금부터 서로 명함 교환하며 인사 나눠요.</p>
-    <p style="font-size:0.42em; color:rgba(206,185,164,0.5); margin-top:0.5em;">최근 공지도 확인해주세요!</p>
+  <div class="v-center" style="position:relative; z-index:2; text-align:center; align-items:center; padding:72px;">
+    <h2 style="font-size:2em; color:var(--cream) !important; margin-bottom:0.6em;">명함 교환 &<br>네트워킹</h2>
+    <p style="font-size:0.55em; color:var(--sand);">지금부터 서로 명함 교환하며 인사 나눠요.</p>
+    <p style="font-size:0.4em; color:rgba(206,185,164,0.45); margin-top:0.7em;">최근 공지도 확인해주세요!</p>
   </div>
 </section>
 
