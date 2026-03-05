@@ -42,20 +42,21 @@
 }
 .reveal h2 {
   font-weight: 700; font-size: 1.55em;
-  color: var(--red); margin-bottom: 0.4em;
+  color: var(--red); margin-bottom: 0.6em;
   letter-spacing: -0.03em; line-height: 1.3;
 }
 .reveal h3 {
   font-weight: 600; font-size: 0.88em;
-  color: var(--burgundy); margin-bottom: 0.3em;
+  color: var(--burgundy); margin-bottom: 0.45em;
   line-height: 1.3;
 }
 .reveal p, .reveal li {
   font-weight: 400; font-size: 0.65em;
   line-height: 1.55; color: inherit;
 }
-.reveal ul { list-style: none; padding-left: 0; margin: 0; }
-.reveal ul li { position: relative; padding-left: 1em; margin-bottom: 0.25em; }
+.reveal p + p { margin-top: 0.35em; }
+.reveal ul { list-style: none; padding-left: 0; margin: 0.2em 0 0.4em; }
+.reveal ul li { position: relative; padding-left: 1em; margin-bottom: 0.3em; }
 .reveal ul li::before {
   content: ''; position: absolute;
   left: 0; top: 0.55em;
@@ -99,12 +100,7 @@
 .align-center { align-items: center; }
 .v-center { display: flex; flex-direction: column; justify-content: center; height: 100%; }
 
-.section-label {
-  font-size: 0.42em; font-weight: 500;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--red); margin-bottom: 0.1em; opacity: 0.5;
-}
-.t-dark .section-label, .t-espresso .section-label, .t-brown .section-label { color: var(--coral); }
+.section-label { display: none; }
 
 .divider { display: none; }
 
@@ -423,13 +419,13 @@
   <div class="grid-2 align-center">
     <div>
       <p style="margin-bottom:0.4em;">경영 전략, 리더십, 커리어 등 시의적절한 주제를 중심으로 기획됩니다.</p>
-      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.15em;">진행 방식</p>
+      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.2em;">진행 방식</p>
       <ul style="margin-bottom:0.4em;">
         <li>토론형 — 주제에 대해 멤버들과 깊이 있는 대화</li>
         <li>강의형 — 해당 분야 전문 파트너의 강의</li>
         <li>워크숍형 — 실습과 결과물 중심의 모임</li>
       </ul>
-      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.15em;">팀 어드벤처</p>
+      <p style="font-size:0.58em; font-weight:600; color:var(--red); margin-bottom:0.2em;">팀 어드벤처</p>
       <p>두 번째 달부터 다른 팀의 세션을 청강할 수 있습니다.<br>자신의 팀을 제외하고 모든 팀에 1번씩 참여 가능합니다.</p>
     </div>
     <img class="img-cover" src="https://cdn.imweb.me/thumbnail/20250809/0b1be3d7ee166.png" alt="팀 활동" style="height:300px;">
@@ -446,13 +442,13 @@
   <div class="grid-2" style="gap:32px;">
     <div>
       <h3 style="color:var(--red) !important;">이벤트</h3>
-      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.15em;">월별 세미나</p>
+      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.2em;">월별 세미나</p>
       <ul style="margin-bottom:0.4em;">
         <li>PEST 브리핑 — 정치·경제·사회·기술 이슈 (시즌 1회)</li>
         <li>AAR 밋업 — 멤버 프로젝트 기획/운영기 발표 (시즌 1회)</li>
         <li>HBR 브리핑 — 멤버가 추천하는 HBR 아티클 (시즌 1회)</li>
       </ul>
-      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.15em;">정기 이벤트</p>
+      <p style="font-size:0.56em; font-weight:500; color:var(--burgundy); margin-bottom:0.2em;">정기 이벤트</p>
       <ul>
         <li>저자 북토크 — 저자를 직접 만나 대화 (매달 1회)</li>
         <li>스페셜 토크 — 멤버·파트너·운영진 초대 기획 (상시)</li>
@@ -764,7 +760,7 @@ Reveal.initialize({
   center: false,
   controls: true,
   controlsTutorial: false,
-  progress: true,
+  progress: false,
   keyboard: true,
   overview: true,
   touch: true,
